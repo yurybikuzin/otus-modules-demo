@@ -27,8 +27,8 @@
 pub(crate) mod foo;
 
 pub mod prelude {
-    pub use super::foo::bar::functon_from_bar;
-    pub use super::internal::public_api;
+    pub use crate::foo::bar::functon_from_bar;
+    pub use crate::internal::public_api;
 }
 
 /// Эта функция сгенерирована Cargo автоматически при создании проекта. Нам пригодится.
