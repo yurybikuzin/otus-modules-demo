@@ -76,6 +76,7 @@ mod tests {
         assert_eq!(super::internal::internal_function(), 3);
     }
 
+    /// Этот тест проверяет, что функция `functon_from_bar` из модуля `foo::bar` доступна в юнит-тестах.
     #[test]
     fn functon_from_bar_is_accessible() {
         assert_eq!(foo::bar::functon_from_bar(), 10);
