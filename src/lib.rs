@@ -41,8 +41,9 @@ pub fn add(left: i32, right: i32) -> i32 {
 /// Однако там же определена функция `public_api`, которую мы хотели бы использовать снаружи.
 pub(crate) mod internal {
     /// Это часть публичного API нашей библиотеки.
+    use crate::add;
     pub fn public_api() -> i32 {
-        super::add(super::foo::give_answer(), internal_function())
+        add(crate::foo::give_answer(), internal_function())
     }
 
     /// Мы хотим тестировать эту функцию, но не хотим давать к ней доступ извне нашего крейта.
